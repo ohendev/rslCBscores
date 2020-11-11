@@ -1,0 +1,6 @@
+#IDE intelliJ
+target/
+.idea
+*.iws
+*.iml
+*.ipr
