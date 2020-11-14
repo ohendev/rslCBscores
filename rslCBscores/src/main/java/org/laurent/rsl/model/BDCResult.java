@@ -1,18 +1,19 @@
 package org.laurent.rsl.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
-import lombok.Builder;
 import lombok.AccessLevel;
-import javax.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Enumerated;
-import javax.persistence.GenerationType;
 import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 @Entity
@@ -21,11 +22,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Setter
 @Getter
-public class CBresults {
+public class BDCResult {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDateTime dateTime;
+    private LocalDateTime datetime;
 
     @Enumerated(value = EnumType.STRING)
     private Difficulty difficulty;
@@ -33,10 +35,11 @@ public class CBresults {
 
     @Override
     public String toString() {
-        return "CBresults{" +
-                "dateTime=" + dateTime +
+        return "BDCResult{" +
+                "datetime=" + datetime +
                 ", difficulty=" + difficulty +
                 ", score=" + score +
                 '}';
     }
 }
+

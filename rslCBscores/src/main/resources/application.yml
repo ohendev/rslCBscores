@@ -4,7 +4,7 @@ spring:
       enabled: true
       path: /h2-console
   datasource:
-    url: jdbc:h2:file:~/rsl
+    url: jdbc:h2:file:~/BDC
     username: sa
     password:
     driverClassName: org.h2.Driver
