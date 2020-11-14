@@ -105,6 +105,12 @@ public class PlayerService {
         playerRepo.save(player);
         return player;
     }
+
+    public boolean deletePlayerById(Long id) {
+        Player player = playerRepo.getOne(id);
+        playerRepo.delete(player);
+        return !playerRepo.existsById(id);
+    }
 }
 
 
